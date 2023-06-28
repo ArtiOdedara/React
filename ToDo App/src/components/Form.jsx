@@ -1,22 +1,22 @@
-import React,{useState} from 'react' 
-import ListNodes from './ListNodes';
-import '../Form.css'
+import React,{useState} from "react"
+import ListNodes from "./ListNodes"
+import "../Form.css"
 
 function inputForm(){
-  const [todos, setTodos] = useState([]);
-  const [value, setValue] = useState("");
+  const [todos, setTodos] = useState([])
+  const [value, setValue] = useState("")
 
   const handleSubmit = e => {
-    e.preventDefault();
-    if(!value) return ;
+    e.preventDefault()
+    if(!value) return 
 
-    addNote(value);
-    setValue("");
+    addNote(value)
+    setValue("")
   }
 
   const addNote = (value) => {
-    const newTask = [...todos, {value, completed: false}];
-    setTodos(newTask);
+    const newTask = [...todos, {value, completed: false}]
+    setTodos(newTask)
   }
 
   return(
@@ -32,4 +32,4 @@ function inputForm(){
 
 }
 
-export default inputForm;
+export default inputForm

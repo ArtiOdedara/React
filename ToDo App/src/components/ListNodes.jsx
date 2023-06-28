@@ -1,4 +1,8 @@
 import {useState} from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import '../ListNodes.css'
+
 
 function listNodes(props){
   const [checked, setChecked] = useState(false); 
@@ -23,14 +27,14 @@ function listNodes(props){
     <>
       <div>
         { props.todos.map((note, index) => (
-          <div>
-            <input type="checkbox"  onChange={(e) => {
+          <div className="allNotes">
+            <input type="checkbox"  className="taskCheckbox" onChange={(e) => {
                 completeTask(index, e.target.checked)
             }} />
             <span id="noteText" style={{ textDecoration: note.completed ? "line-through" : "" }}>
               {note.value}</span>
-            <button onClick={()=> removeTask(index)}>X</button>
-        </div>
+              <button className="removeBtn" onClick={()=> removeTask(index)}><FontAwesomeIcon icon={faTrash} className="trashIcon" /></button>
+          </div>
         ))
         }
       </div>

@@ -1,0 +1,22 @@
+.allNotes{
+  margin: 10px 0;
+  padding: 5px 0;
+  width: 500px;
+  height: 30px;
+  background-color: #fff;
+  display: flex;
+}
+
+.removeBtn{
+  padding: 0px 6px;
+  border: 1px solid #b10c0c;
+  border-radius: 3px;
+  background-color: rgb(122, 11, 11);
+  color: #fff;
+}
+.taskCheckbox{
+  margin-left: 20px;
+}
+.trashIcon{
+  width: 15px;
+}

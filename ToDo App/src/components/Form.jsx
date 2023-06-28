@@ -1,5 +1,6 @@
 import React,{useState} from 'react' 
 import ListNodes from './ListNodes';
+import '../Form.css'
 
 function inputForm(){
   const [todos, setTodos] = useState([]);
@@ -20,7 +21,7 @@ function inputForm(){
 
   return(
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className='noteForm'>
         <input type="text" name="noteText" id="noteText" value={value} onChange={e => setValue(e.target.value)} />
         <input type="submit" name="submitNote" id="submitNote" value="Add"/>
       </form>

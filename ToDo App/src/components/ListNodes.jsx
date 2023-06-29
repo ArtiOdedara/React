@@ -38,7 +38,7 @@ function listNodes(props){
             <input type="checkbox"  className="taskCheckbox" onChange={(e) => {
                 completeTask(index, e.target.checked)}} />
 
-            <span id="noteText" style={{ textDecoration: note.completed ? "line-through" : "" }}>
+            <span id="noteData" title={note.value} style={{ textDecoration: note.completed ? "line-through" : "" }}>
               {note.value}</span>
 
             <EditNote index= {index} message={note.value} handleEdit = {handleEdit}/>

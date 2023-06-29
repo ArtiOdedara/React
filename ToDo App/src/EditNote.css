@@ -1,0 +1,17 @@
+.editButton{
+  width: 30px;
+  height: 30px;
+  padding: 0px 6px;
+  margin:0 7px;
+  border: 1px solid green;
+  border-radius: 3px;
+  background-color: rgb(9, 66, 9);
+  color: #fff;
+}
+
+.editButton:hover{
+  background-color: rgb(4, 36, 4);
+}
+
+.editIcon{
+}

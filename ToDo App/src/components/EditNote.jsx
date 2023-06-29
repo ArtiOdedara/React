@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form'
 import Modal from 'react-bootstrap/Modal'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
+import '../EditNote.css'
 
 function ModalDialog({index, message, handleEdit}) {
   const [show, setShow] = useState(false)
@@ -13,8 +14,8 @@ function ModalDialog({index, message, handleEdit}) {
 
   return (
     <>
-      <Button variant='success small' size="sm" onClick={handleShow}>
-        <FontAwesomeIcon icon={faPenToSquare} className="editIcon" />
+      <Button className='editButton' onClick={handleShow}>
+        <FontAwesomeIcon icon={faPenToSquare} className="editIcon"  />
       </Button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header>

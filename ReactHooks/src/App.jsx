@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import  ComponentB from './ComponentB'
+import UseReducer from './UseReducer'
 
 export const UserContext = React.createContext() 
 export const OccupationContext = React.createContext()
@@ -14,6 +15,9 @@ function App() {
             <ComponentB />
           </OccupationContext.Provider>
         </UserContext.Provider>
+      </div>
+      <div>
+        <UseReducer />
       </div>
     </>
   )

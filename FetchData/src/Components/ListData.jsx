@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import DeleteData from '../Components/DeleteData'
 import '../ListData.css'
 
 function ListData() {
@@ -35,7 +36,7 @@ function ListData() {
                 <td><img src={record.avatar} alt={record.avatar} className='avatarImg'/></td>
                 <td>
                   <button className='bg-success editBtn'>Edit</button> |
-                  <button className='bg-danger deleteBtn'>Delete</button>
+                  <DeleteData itemId={record.id} data={data} setData={setData}/>
                 </td>
               </tr>
             ))

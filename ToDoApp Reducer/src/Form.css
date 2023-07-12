@@ -1,0 +1,18 @@
+.addForm{
+  display: flex;
+  column-gap: 3px;
+}
+
+#note{
+  width: 400px;
+  height: 30px;
+}
+
+.addBtn{
+  padding: 0;
+  width: 70px;
+  height: 30px;
+  border-radius: 2px;
+  background-color: darkblue;
+  color: #fff;
+}

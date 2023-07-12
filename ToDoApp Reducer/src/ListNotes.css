@@ -1,0 +1,28 @@
+.allData{
+  width: 475px;
+  display: flex;
+  margin: 30px 10px;
+  column-gap: 3px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+.noteText{
+  padding: 2px 6px;
+  width: 300px;
+  height: auto;
+  overflow: hidden;
+}
+
+.btns{
+  display: flex;
+  column-gap: 3px;
+}
+
+.removeBtn{
+  width: 100px;
+  background-color: darkred;
+  border-radius: 2px;
+  padding: 3px;
+}

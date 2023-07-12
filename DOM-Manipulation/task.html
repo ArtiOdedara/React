@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div>
+    <form id="detailsForm">
+      <div>
+        <select name="selectElement" id="selectElement">
+          <option value="div">Div</option>
+          <option value="h1">H1</option>
+          <option value="p">P</option>
+        </select>
+      </div>
+
+      <div id="editableFields">
+        <input type="color" id="elementColor">
+        <textarea name="textArea" id="textArea" cols="50" rows="5"></textarea>
+      </div>
+
+      <input type="button" value="Add Element"  id="addBtn" class="addBtn" onclick="createElements()">
+      
+    </form>
+
+  </div>
+
+  <div class="modificationBtns">
+    <button id="editBtn">Edit Element</button>
+    <button id="deleteBtn">Delete Element</button>
+  </div>
+    
+  <div id="elements"></div>
+
+  <script src="task.js"></script>
+
+  </body>
+</html>

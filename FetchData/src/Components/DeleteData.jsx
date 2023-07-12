@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React from 'react'
+import '../DeleteData.css'
 
 function DeleteData({itemId, data, setData}) {
 
@@ -22,7 +23,7 @@ function DeleteData({itemId, data, setData}) {
 
   return (
     <>
-      <button className='bg-danger deleteBtn' onClick={handleDelete}>Delete</button>
+      <button className='deleteBtn' onClick={handleDelete}>Delete</button>
     </>
   )
 }

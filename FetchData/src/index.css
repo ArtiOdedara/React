@@ -24,6 +24,8 @@ a:hover {
 }
 
 body {
+  background: radial-gradient(circle, rgba(222,237,232,1) 0%, rgba(221,216,190,1) 100%);
+
   margin: 0;
   display: flex;
   place-items: center;

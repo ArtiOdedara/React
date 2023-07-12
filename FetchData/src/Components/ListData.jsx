@@ -1,7 +1,9 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import EditData from '../Components/EditData'
 import DeleteData from '../Components/DeleteData'
 import '../ListData.css'
+import CreateUser from './CreateUser'
 
 function ListData() {
   const [data, setData] = useState([])
@@ -15,6 +17,7 @@ function ListData() {
 
   return (
     <>
+      <CreateUser data={data} setData={setData}/>
       <table>
         <thead>
           <tr>
@@ -33,9 +36,9 @@ function ListData() {
                 <td>{record.email}</td>
                 <td>{record.first_name}</td>
                 <td>{record.last_name}</td>
-                <td><img src={record.avatar} alt={record.avatar} className='avatarImg'/></td>
+                <td><img src={record.avatar} alt="Profile Image" className='avatarImg'/></td>
                 <td>
-                  <button className='bg-success editBtn'>Edit</button> |
+                  <EditData item={record} data={data} setData={setData}/>
                   <DeleteData itemId={record.id} data={data} setData={setData}/>
                 </td>
               </tr>

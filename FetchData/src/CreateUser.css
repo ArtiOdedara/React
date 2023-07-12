@@ -1,0 +1,11 @@
+.createUserDiv{
+  margin: 20px 0;
+}
+.createUserBtn{
+  padding: 5px;
+  color: #fff;
+  background-color: rgb(61, 59, 73);
+  border: none;
+  border-radius: 2px;
+  font-size: 17px;
+}

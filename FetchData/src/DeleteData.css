@@ -1,0 +1,10 @@
+.deleteBtn{
+  color: #fff;
+  background-color: darkred;
+  margin: 5px;
+  padding: 0;
+  width: 60px;
+  height: 30px;
+  border: none;
+  border-radius: 2px;
+}

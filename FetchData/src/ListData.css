@@ -1,9 +1,17 @@
-table, th, td{
-  border: 2px solid #000;
+table{
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background-color: #fff;
 }
 
-table tbody tr:nth-child(odd){
-  background-color: rgb(206, 202, 150);
+table thead{
+  background: linear-gradient(90deg, rgb(12, 8, 97) 0%, rgb(49, 49, 165) 35%);
+
+  color: #fff;
+}
+
+table tbody tr:nth-child(even){
+  background-color: rgb(230, 230, 238);
 }
 
 thead th{
@@ -16,12 +24,4 @@ thead th{
   width: 70px;
   height: 70px;
   border-radius: 50%;
-}
-
-.editBtn, .deleteBtn{
-  margin: 5px;
-  padding: 0;
-  width: 60px;
-  height: 30px;
-  border-radius: 2px;
 }

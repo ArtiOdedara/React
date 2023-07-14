@@ -1,0 +1,7 @@
+.navbarUl{
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 30px;
+}

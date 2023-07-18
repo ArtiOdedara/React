@@ -6,10 +6,12 @@ import '../EditData.css'
 import axios from 'axios'
 
 function EditData({item, data, setData}){
-  const [email, setEmail] = useState(item.email)
-  const [firstName, setFirstName] = useState(item.first_name)
-  const [lastName, setLastName] = useState(item.last_name)
-  const [avatar, setAvatar] = useState(item.avatar)
+  const [dataItem, editData] = useState({
+    "email": item.email,
+    "first_name": item.first_name,
+    "last_name": item.last_name,
+    "avatar": item.avatar
+  })
   const [show, setShow] = useState(false)
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
@@ -30,7 +32,7 @@ function EditData({item, data, setData}){
       }
     })
 
-    oldData[index] = {"email": email, "first_name": firstName, "last_name": lastName, "avatar": avatar}
+    oldData[index] = {"email": dataItem.email, "first_name": dataItem.first_name, "last_name": dataItem.last_name, "avatar": dataItem.avatar}
     setData(oldData)
   } 
 
@@ -48,8 +50,8 @@ function EditData({item, data, setData}){
               <Form.Label className='text-secondary'>Email</Form.Label>
               <Form.Control
                 type="text"
-                onChange={(e) => setEmail(e.target.value)}
-                value = {email}
+                onChange={(e) => editData({...dataItem, "email": e.target.value})}
+                value = {dataItem.email}
               />
             </Form.Group>
 
@@ -57,8 +59,8 @@ function EditData({item, data, setData}){
               <Form.Label className='text-secondary'>First Name</Form.Label>
               <Form.Control
                 type="text"
-                onChange={(e) => setFirstName(e.target.value)}
-                value = {firstName}
+                onChange={(e) => editData({...dataItem, "first_name": e.target.value})}
+                value = {dataItem.first_name}
               />
             </Form.Group>
 
@@ -66,8 +68,8 @@ function EditData({item, data, setData}){
               <Form.Label className='text-secondary'>Last Name</Form.Label>
               <Form.Control
                 type="text"
-                onChange={(e) => setLastName(e.target.value)}
-                value = {lastName}
+                onChange={(e) => editData({...dataItem, "last_name": e.target.value})}
+                value = {dataItem.last_name}
               />
             </Form.Group>
 
@@ -75,8 +77,8 @@ function EditData({item, data, setData}){
               <Form.Label className='text-secondary'>Avatar Url</Form.Label>
               <Form.Control
                 type="text"
-                onChange={(e) => setAvatar(e.target.value)}
-                value = {avatar}
+                onChange={(e) => editData({...dataItem, "avatar": e.target.value})}
+                value = {dataItem.avatar}
               />
             </Form.Group>
           </Form>

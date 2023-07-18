@@ -6,10 +6,12 @@ import Modal from 'react-bootstrap/Modal'
 import '../CreateUser.css'
 
 function CreateUser({data, setData}) {
-  const [email, setEmail] = useState("")
-  const [firstName, setFirstName] = useState("")
-  const [lastName, setLastName] = useState("")
-  const [avatar, setAvatar] = useState("")
+  const [dataItem, setDataItem] = useState({
+    "email": "",
+    "first_name": "",
+    "last_name": "",
+    "avatar": ""
+  })
   const [show, setShow] = useState(false)
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
@@ -19,10 +21,16 @@ function CreateUser({data, setData}) {
     .then(response => console.log(response))
     .catch(err=> console.log(err))
 
+    console.log("here");
     const oldData = [...data]
-    oldData.push({id: Date.now(), email: email, first_name: firstName, last_name: lastName, avatar: avatar})
+    oldData.push({id: Date.now(), "email": dataItem.email, "first_name": dataItem.first_name, "last_name": dataItem.last_name, "avatar": dataItem.avatar})
     setData(oldData)
-    console.log(oldData);
+    setDataItem({
+      "email": "",
+      "first_name": "",
+      "last_name": "",
+      "avatar": ""
+    })
   }
 
   return (
@@ -40,8 +48,8 @@ function CreateUser({data, setData}) {
                 <Form.Label className='text-secondary'>Email</Form.Label>
                 <Form.Control
                   type="text"
-                  onChange={(e) => setEmail(e.target.value)}
-                  value = {email}
+                  onChange={(e) => setDataItem({...dataItem, "email": e.target.value})}
+                  value = {dataItem.email}
                 />
               </Form.Group>
 
@@ -49,8 +57,8 @@ function CreateUser({data, setData}) {
                 <Form.Label className='text-secondary'>First Name</Form.Label>
                 <Form.Control
                   type="text"
-                  onChange={(e) => setFirstName(e.target.value)}
-                  value = {firstName}
+                  onChange={(e) => setDataItem({...dataItem, "first_name": e.target.value})}
+                  value = {dataItem.first_name}
                 />
               </Form.Group>
 
@@ -58,8 +66,8 @@ function CreateUser({data, setData}) {
                 <Form.Label className='text-secondary'>Last Name</Form.Label>
                 <Form.Control
                   type="text"
-                  onChange={(e) => setLastName(e.target.value)}
-                  value = {lastName}
+                  onChange={(e) => setDataItem({...dataItem, "last_name":e.target.value})}
+                  value = {dataItem.last_name}
                 />
               </Form.Group>
 
@@ -67,8 +75,8 @@ function CreateUser({data, setData}) {
                 <Form.Label className='text-secondary'>Avatar Url</Form.Label>
                 <Form.Control
                   type="text"
-                  onChange={(e) => setAvatar(e.target.value)}
-                  value = {avatar}
+                  onChange={(e) => setDataItem({...dataItem, "avatar": e.target.value})}
+                  value = {dataItem.avatar}
                 />
               </Form.Group>
             </Form>
